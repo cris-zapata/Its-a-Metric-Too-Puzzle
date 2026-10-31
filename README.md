@@ -9,7 +9,7 @@
 </div>
 
 <!-- OPTIONAL HEADER: Upload a wide image to assets/banner.png, then remove the comment markers around the next line. -->
-<!-- ![It's a Metric, Too — project banner](assets/banner.png) -->
+!-- ![It's a Metric, Too — project banner](assets/banner.png) -->
 
 ---
 
@@ -18,7 +18,7 @@
 I spent eight days working on **“It's a Metric, Too”**, a Jane Street puzzle involving an 11 × 11 grid, symmetric regions, and shortest-path distances. What started as a pencil-and-paper challenge gradually became an exploration of how geometry and graph theory interact.
 
 <!-- TODO: Upload an image of the *unsolved* puzzle as assets/original-puzzle.png and uncomment below. -->
-<!-- ![Original 11 by 11 puzzle](assets/original-puzzle.png) -->
+!-- ![Original 11 by 11 puzzle](assets/original-puzzle.png) -->
 
 ### The rules, in brief
 
@@ -80,26 +80,26 @@ These pages are part of the actual process — including guesses that didn't wor
 
 *What I was testing:* [Add your first deductions, initial diagrams, and why you thought they might work.]
 
-<!-- ![Early handwritten notes](assets/notes-01.png) -->
+!-- ![Early handwritten notes](assets/notes-01.png) -->
 
 ### 02 · Working with symmetry and state sizes
 
 *What changed:* [Explain one important constraint or realization you discovered.]
 
-<!-- ![Symmetry and state-size notes](assets/notes-02.png) -->
+!-- ![Symmetry and state-size notes](assets/notes-02.png) -->
 
 ### 03 · The difficult regions
 
 *Where I got stuck:* [Describe your attempts around the larger numbered clues and any configurations you revised.]
 
-<!-- ![Later handwritten notes](assets/notes-03.png) -->
+!-- ![Later handwritten notes](assets/notes-03.png) -->
 
 <details>
 <summary><strong>More notebook pages</strong> (expand)</summary>
 
 Add additional pages here, with a short caption for each one. This keeps the main page readable while letting interested readers explore the full process.
 
-<!-- ![Additional notebook page](assets/notes-04.png) -->
+!-- ![Additional notebook page](assets/notes-04.png) -->
 
 </details>
 
@@ -128,7 +128,7 @@ After seeing the verified completed arrangement, the feature that stood out most
 <details>
 <summary><strong>Show the completed board (spoiler)</strong></summary>
 
-<!-- ![Completed puzzle](assets/completed-board.png) -->
+!-- ![Completed puzzle](assets/completed-board.png) -->
 
 **Final score: 408,951.**
 
