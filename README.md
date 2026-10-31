@@ -84,7 +84,7 @@ This is where I began using the larger clues to narrow down possibilities. I loo
 
 ### 04 — More configurations, more revisions
 
-By this point, I had several different versions of the grid. Some regions looked promising, but the overall arrangement still wasn't consistent. I kept a few of these attempts because they show how much of the process was revisiting assumptions rather than making one clean sequence of deductions.
+Shown below is the final configuration which I drew because why not, but before getting to this point the final config was actually done through the interactive solver which will also be shown below with the confirmation message that it satisfies all conditions!
 
 <p align="center"><img src="assets/ipad-notes-04.png" alt="Fourth page of iPad notes: alternative colored state arrangements" width="780" /></p>
 
