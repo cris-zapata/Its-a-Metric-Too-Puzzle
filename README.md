@@ -2,7 +2,7 @@
 
 ### Eight days of symmetry, shortest paths, and a lot of trial and error.
 
-*A personal exploration of Jane Street's grid puzzle — from handwritten deductions to interactive experimentation.*
+*A dive into my thought process and tools that helped me solve this puzzle*
 
 [The original puzzle](https://www.janestreet.com/puzzles/) · [Interactive puzzle board](https://pazqo.github.io/#/games/nation-puzzle) · [My notes](#my-handwritten-notes)
 
