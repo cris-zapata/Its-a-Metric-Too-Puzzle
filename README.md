@@ -116,10 +116,10 @@ The frustrating part was that fixing one mismatch could create another. I could 
 ### Seeing the completed grid
 
 Eventually, I finally had worked through the entirety of the board, doing various guesses and checks while sticking to the rules of the puzzle.
-One of the biggest realizations I had mid way through the puzzle was that my original 11 state configuration felt right in terms of size due to the squares with values 11 and 22, but it felt as if the shape of it was incorrect. As i continued to work through it I later reconfigured it to allow for the bottom left corner of the board to have a size of 10 which meshed perfectly with the state of size 11, and the capital at (11,6).
+One of the biggest realizations I had mid way through the puzzle was that my original 11 state configuration felt right in terms of size due to the squares with values 11 and 22, but it felt as if the shape of it was incorrect. As I continued to work through it I later reconfigured it to allow for the bottom left corner of the board to have a size of 10 which meshed perfectly with the state of size 11, and the capital at (11,6).
 
 <details>
-<summary><strong>Reveal the completed 11 × 11 grid (spoiler)</strong></summary>
+<summary><strong>Reveal the completed 11 × 11 grid (spoiler(sort of:)))</strong></summary>
 
 <p align="center"><img src="assets/completed-board.png" alt="Completed interactive puzzle with all 33 clues matching" width="780" /></p>
 <p align="center"><em>The completed configuration shown on the interactive board.</em></p>
