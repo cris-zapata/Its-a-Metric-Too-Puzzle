@@ -19,7 +19,7 @@ I spent eight days trying to make sense of Jane Street's **It's a Metric, Too** 
 The challenge is an **11 × 11 grid** divided into connected, symmetric regions called *states*. The numbers aren't state sizes: each one represents the minimum cost of traveling from that square to a state capital. What makes the puzzle interesting is that changing even one state can change the travel costs across the board.
 
 <p align="center">
-  <img src="assets/original-puzzle.png" alt="Original 11 by 11 Jane Street puzzle with numbered clues" width="520" />
+  <img src="assets/puzzle-11x11.png" alt="Original 11x11 puzzle" width="450">
 </p>
 
 <p align="center"><em>The original 11 × 11 puzzle. Source: Jane Street.</em></p>
