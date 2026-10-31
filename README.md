@@ -4,7 +4,7 @@
 
 ### Eight days of symmetry, shortest paths, and a lot of trial and error.
 
-*My experience working through Jane Street's 11 × 11 puzzle — from iPad sketches to an interactive board.*
+*My experience working through Jane Street's 11 × 11 puzzle going from iPad sketches to an interactive board.*
 
 [The puzzle](#the-puzzle) · [My notes](#my-handwritten-notes) · [Interactive board](#interactive-exploration) · [What I learned](#looking-back) · [Credits](#links-and-credits)
 
@@ -37,7 +37,7 @@ After satisfying all the clues, the answer is calculated by writing each state's
 
 ### The 5 × 5 example
 
-Before tackling the full puzzle, I spent time understanding the smaller example. Seeing the completed states, their capitals, and the state-size grid side by side helped me understand what the numbers were actually measuring.
+Before tackling the full puzzle, I spent time understanding the smaller example. Seeing the completed states, their capitals, and the state size grid side by side helped me understand what the numbers were actually measuring.
 
 <p align="center"><img src="assets/example-5x5.png" alt="Jane Street’s worked 5 by 5 example" width="780" /></p>
 
@@ -53,9 +53,6 @@ As I worked through it, I began writing down more general relationships instead 
 
 For two adjacent numbered squares, the difference between their distances to a capital cannot be greater than the cost of crossing the edge between them:
 
-$$
-|d(u)-d(v)| \leq w(u,v).
-$$
 
 For example, the adjacent **77** and **61** clues differ by **16**, so the cost of moving directly between those squares must be at least 16. That doesn't solve the region by itself, but it immediately rules out some smaller-state arrangements.
 
@@ -69,7 +66,7 @@ These are the actual pages I worked on. They're not meant to be a polished proof
 
 ### 01 — Getting familiar with the rules
 
-My first page was mostly about translating the puzzle into something I could reason about: what makes a valid state, how travel costs work, and how the 5 × 5 example is scored. I also started sketching possible state patterns on the larger grid.
+My first page was mostly about translating the puzzle into something I could reason about: what made a valid state, how travel costs work, and how the 5 × 5 example is scored. I also started sketching possible state patterns on the larger grid.
 
 <p align="center"><img src="assets/ipad-notes-01.png" alt="First page of iPad notes: puzzle rules, five-by-five example, and early state sketches" width="780" /></p>
 
@@ -102,13 +99,14 @@ By this point, I had several different versions of the grid. Some regions looked
 
 ## Interactive exploration
 
-After spending so much time sketching different arrangements on my iPad, I came across an [interactive version of the puzzle](https://pazqo.github.io/#/games/nation-puzzle). This was easily one of the most useful things I found during the entire process.
+After spending so much time sketching different arrangements on my iPad, I came across an [interactive version of the puzzle](https://pazqo.github.io/#/games/nation-puzzle). This was easily the most useful thing I found during the entire process.
 
 The biggest problem with doing everything by hand was that I could spend a while drawing a state, checking its symmetry, and calculating a few distances, only to realize that something elsewhere on the board no longer worked. Then I'd have to redraw everything. On the interactive board, I could move boundaries around, see the size of each state, and immediately check how many of the numbered clues matched. It didn't do the reasoning for me, but it made testing my reasoning *so* much easier.
 
-### One of my closest attempts
+### One of the initial close attempts
 
 At one point, I had **15 unassigned cells** remaining and **22 of the 33 clues matching**. I was starting to feel like I was getting somewhere. Some of the regions looked convincing, and a few of my assumptions about where capitals might belong seemed to be holding up.
+This image was from day 4 of attempting to solve the puzzle so there was still more work to go as it looked like many of the states were somewhat close but also not quite.
 
 <p align="center"><img src="assets/my-intermediate-attempt.png" alt="My incomplete interactive puzzle attempt, with 15 unassigned cells and 22 of 33 clues matching" width="780" /></p>
 <p align="center"><em>One of my intermediate configurations: 22/33 clues matched, but the partition still wasn't complete.</em></p>
@@ -117,7 +115,8 @@ The frustrating part was that fixing one mismatch could create another. I could 
 
 ### Seeing the completed grid
 
-Eventually, I was able to compare my work with a completed configuration on the same board: **0 unassigned cells and 33/33 clues matched**. The result was genuinely surprising.
+Eventually, I finally had worked through the entirety of the board, doing various guesses and checks while sticking to the rules of the puzzle.
+One of the biggest realizations I had mid way through the puzzle was that my original 11 state configuration felt right in terms of size due to the squares with values 11 and 22, but it felt as if the shape of it was incorrect. As i continued to work through it I later reconfigured it to allow for the bottom left corner of the board to have a size of 10 which meshed perfectly with the state of size 11, and the capital at (11,6).
 
 <details>
 <summary><strong>Reveal the completed 11 × 11 grid (spoiler)</strong></summary>
@@ -127,7 +126,7 @@ Eventually, I was able to compare my work with a completed configuration on the 
 
 </details>
 
-The part that stood out immediately was the enormous **37-cell state** running through the middle and lower-right side of the grid. I had been concentrating on relatively small symmetric regions, so I hadn't really considered just how large one state could be while still satisfying the symmetry rules. It made me rethink some of the assumptions I had been making throughout the week.
+As I was messing around with various combinations, one of the things that stood out to me was the large numbers of 45, 77, 61, and 51. Now to begin I never initially though that this would all be one huge state, so as I was going along and started to see that this could be a possibility i was kind of in shock that the state was going to potentially be that large. A couple of ideas I had was that the bottom right was just going to be one big state but never really thought that this single state would all connect and be roughly 40 squares for a single state. Oddly enough this happened to be the last state i pieced together and as you could possibly imagine it took quite a while as I initially thought something must be wrong especially as i would connect certain squares and was still trying to mesh other squares together which never worked.
 
 ### Credit where it's due — Stefano Pascolutti
 
@@ -159,7 +158,7 @@ One thing this puzzle really drove home for me was how much harder a problem bec
 
 I also tried approaching parts of it computationally. The smaller **5 × 5** example was manageable, but scaling the search to the **11 × 11** puzzle was a different challenge altogether. Generating more candidate states wasn't enough when the search could still miss an important shape.
 
-After seeing the completed arrangement, the feature that surprised me most was a single **37-square state**. I had spent so much time thinking about smaller regions that I hadn't appreciated how much of the board could belong to one symmetric state.
+During the solve of this puzzle I also started working on some code that would in theory make this puzzle way easier to solve. Ill say I'm nowhere near the best programmer, even horrible in some regards, but I ran into issues even with just trying to get my code to solve an empty 5x5 slate. When I ran into this issue i figured the 11x11 would probably be computationally impossible to solve for the code I had.
 
 <details>
 <summary><strong>Final score (spoiler)</strong></summary>
@@ -170,7 +169,7 @@ The completed configuration gives a score of **408,951**. The most surprising fe
 
 ## Final thoughts
 
-Eight days, a lot of sketches, plenty of wrong turns, and a much better appreciation for the relationship between geometry and shortest paths. I wanted to share the process rather than just post the answer, because the attempts that didn't work were a big part of what made this interesting.
+Eight days, a lot of sketches, plenty of wrong turns, and a much better appreciation for geometry. I wanted to share the process rather than just post the answer, because the attempts that didn't work were a big part of what made this interesting. I also wanted to say if there are any easier ways to solve this puzzle that I maybe didn't catch such as tricks that I missed or a solid algorithm that can solve this puzzle way better computationally I would greatly appreciate the feedback as I essentially brute forced this puzzle while following what I believe are basic principals and understandings of the puzzle.
 
 ---
 
