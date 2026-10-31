@@ -6,7 +6,7 @@
 
 *My experience working through Jane Street's 11 × 11 puzzle — from iPad sketches to an interactive board.*
 
-[The puzzle](#the-puzzle) · [My notes](#my-handwritten-notes) · [Interactive exploration](#interactive-exploration) · [Final thoughts](#final-thoughts)
+[The puzzle](#the-puzzle) · [My notes](#my-handwritten-notes) · [Interactive board](#interactive-exploration) · [What I learned](#looking-back) · [Credits](#links-and-credits)
 
 </div>
 
@@ -39,7 +39,7 @@ After satisfying all the clues, the answer is calculated by writing each state's
 
 Before tackling the full puzzle, I spent time understanding the smaller example. Seeing the completed states, their capitals, and the state-size grid side by side helped me understand what the numbers were actually measuring.
 
-![Jane Street's 5 by 5 example, completed states, and state-size grid](assets/example-5x5.png)
+<p align="center"><img src="assets/example-5x5.png" alt="Jane Street’s worked 5 by 5 example" width="780" /></p>
 
 The example's answer is **8,045**. I kept coming back to it whenever I needed to check whether I was interpreting a rule correctly.
 
@@ -102,17 +102,54 @@ By this point, I had several different versions of the grid. Some regions looked
 
 ## Interactive exploration
 
-Later, I found a community-made [interactive version of the puzzle](https://pazqo.github.io/#/games/nation-puzzle). This made experimenting a lot easier. Instead of redrawing the grid every time I wanted to move a boundary, I could try a different configuration and see how it affected the state sizes and clue distances.
+After spending so much time sketching different arrangements on my iPad, I came across an [interactive version of the puzzle](https://pazqo.github.io/#/games/nation-puzzle). This was easily one of the most useful things I found during the entire process.
 
-That feedback was especially useful when I had a region that *looked* reasonable but didn't satisfy the rest of the board. It let me spend more time thinking about the mathematics and less time repeatedly drawing the same 11 × 11 grid.
+The biggest problem with doing everything by hand was that I could spend a while drawing a state, checking its symmetry, and calculating a few distances, only to realize that something elsewhere on the board no longer worked. Then I'd have to redraw everything. On the interactive board, I could move boundaries around, see the size of each state, and immediately check how many of the numbered clues matched. It didn't do the reasoning for me, but it made testing my reasoning *so* much easier.
 
-**[Try the interactive Nation Puzzle board](https://pazqo.github.io/#/games/nation-puzzle)**
+### One of my closest attempts
 
-<!-- Optional: upload a screenshot of one of my intermediate board configurations to assets/interactive-board.png, then uncomment this line:
-![One of my intermediate interactive configurations](assets/interactive-board.png)
--->
+At one point, I had **15 unassigned cells** remaining and **22 of the 33 clues matching**. I was starting to feel like I was getting somewhere. Some of the regions looked convincing, and a few of my assumptions about where capitals might belong seemed to be holding up.
 
-I'm grateful to the person who built and shared this tool. It made the exploration much more approachable. *I'll add a direct creator credit here once I confirm the original post.*
+<p align="center"><img src="assets/my-intermediate-attempt.png" alt="My incomplete interactive puzzle attempt, with 15 unassigned cells and 22 of 33 clues matching" width="780" /></p>
+<p align="center"><em>One of my intermediate configurations: 22/33 clues matched, but the partition still wasn't complete.</em></p>
+
+The frustrating part was that fixing one mismatch could create another. I could get a section of the grid to behave correctly and still be completely wrong about the overall state structure. Looking back, this was probably the clearest example of how interconnected the puzzle really was.
+
+### Seeing the completed grid
+
+Eventually, I was able to compare my work with a completed configuration on the same board: **0 unassigned cells and 33/33 clues matched**. The result was genuinely surprising.
+
+<details>
+<summary><strong>Reveal the completed 11 × 11 grid (spoiler)</strong></summary>
+
+<p align="center"><img src="assets/completed-board.png" alt="Completed interactive puzzle with all 33 clues matching" width="780" /></p>
+<p align="center"><em>The completed configuration shown on the interactive board.</em></p>
+
+</details>
+
+The part that stood out immediately was the enormous **37-cell state** running through the middle and lower-right side of the grid. I had been concentrating on relatively small symmetric regions, so I hadn't really considered just how large one state could be while still satisfying the symmetry rules. It made me rethink some of the assumptions I had been making throughout the week.
+
+### Credit where it's due — Stefano Pascolutti
+
+A huge shout-out to **[Stefano Pascolutti](https://www.linkedin.com/in/pazqo/)** for creating the [interactive Nation Puzzle board](https://pazqo.github.io/#/games/nation-puzzle). I genuinely don't think my experience with this puzzle would have been the same without it.
+
+Before finding the board, I was drawing and redrawing states on my iPad, trying to keep track of their sizes, capitals, and travel costs. That was useful for understanding the rules, but it became pretty difficult to manage as the grid got more complicated. Stefano's tool gave me a way to actually *experiment*: change a boundary, see the new state sizes, and check how many clues still matched.
+
+What I appreciated most was that it wasn't simply an answer generator. I still had to decide which shapes were worth trying and work out why an arrangement might make sense. The board just made it much easier to see when I was wrong and move on to another idea. It helped me make far more progress than I could have by repeatedly starting over on paper.
+
+I'm really grateful that he made this available. It's a great example of how a relatively simple interactive interface can make a difficult mathematical problem much more approachable.
+
+**Links:** [Stefano on LinkedIn](https://www.linkedin.com/in/pazqo/) · [Try the interactive puzzle board](https://pazqo.github.io/#/games/nation-puzzle)
+
+### Something I'd like to explore myself
+
+One thing I took away from this experience is how useful a small, purpose-built interactive tool can be for a difficult puzzle. There's a big difference between staring at a static grid and being able to change a hypothesis, see its consequences, and immediately test another one.
+
+It also got me thinking about making something similar for future puzzles. Not necessarily a program that automatically solves everything, but a tool that helps with the **exploration**: drawing candidate regions, checking rules, highlighting contradictions, and tracking progress.
+
+I'd love to try building a reusable version of this idea someday. I can imagine starting with a grid editor and a few rule-checking functions, then gradually adding features like undo/redo, live constraint validation, and a way to save different attempts. For a puzzle like this one, even something as simple as displaying which clues are satisfied and which are not makes a huge difference.
+
+The interesting part to me is that the software wouldn't replace the reasoning. It would give me a better environment to *do* the reasoning. After spending eight days on this puzzle, that's an idea I'm definitely interested in exploring further.
 
 ---
 
@@ -125,13 +162,9 @@ I also tried approaching parts of it computationally. The smaller **5 × 5** exa
 After seeing the completed arrangement, the feature that surprised me most was a single **37-square state**. I had spent so much time thinking about smaller regions that I hadn't appreciated how much of the board could belong to one symmetric state.
 
 <details>
-<summary><strong>Final answer (spoiler)</strong></summary>
+<summary><strong>Final score (spoiler)</strong></summary>
 
-The verified score is **408,951**. The completed grid contains an irregular 37-square state with 180° rotational symmetry.
-
-<!-- Optional: upload the completed board as assets/completed-board.png and uncomment:
-![Completed eleven-by-eleven puzzle](assets/completed-board.png)
--->
+The completed configuration gives a score of **408,951**. The most surprising feature is the irregular **37-cell state**, which has 180° rotational symmetry.
 
 </details>
 
@@ -144,10 +177,7 @@ Eight days, a lot of sketches, plenty of wrong turns, and a much better apprecia
 ## Links and credits
 
 - **Original puzzle:** Jane Street, [*It's a Metric, Too*](https://www.janestreet.com/puzzles/).
-- **Interactive board:** [Nation Puzzle](https://pazqo.github.io/#/games/nation-puzzle), community-made exploration tool.
+- **Interactive board:** [Nation Puzzle](https://pazqo.github.io/#/games/nation-puzzle), created by **[Stefano Pascolutti](https://www.linkedin.com/in/pazqo/)**. His tool made exploring and testing configurations much easier.
 - **Notebook pages:** My original handwritten iPad notes, included above and in [PDF form](notes/Puzzles-original.pdf).
 
 *This is a personal project journal, not an official Jane Street solution or affiliated project.*
-[ ] Decide whether you want the final board revealed behind the spoiler.
-[ ] Remove any unused sections.
--->
